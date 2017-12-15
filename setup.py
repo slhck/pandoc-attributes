@@ -3,7 +3,7 @@ from setuptools import setup
 try:
     import pypandoc
     long_description = pypandoc.convert('README.md', to='rst', format='md')
-except (IOError, ImportError):
+except (IOError, ImportError, RuntimeError):
     long_description = ''
 
 setup(
